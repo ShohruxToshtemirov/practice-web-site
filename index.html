@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/import.css" />
+    <link rel="stylesheet" href="css/focus.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="images-of-cats">
+        <img class="first" src="img/204022cbc4380526588393349e35ee89.jpg" alt="">
+        <img class="second" src="img/9423706456ed69e0d0a0c4ec93478034.jpg" alt="">
+        <img class="thirth" src="img/b611d68c99d839b542efe579cdb9f6e8.jpg" alt="">
+        <img class="fourth" src="img/i.webp" alt="">
+        <img class="five" src="img/smart_crop_516x290.jpg" alt="">
+        <img class="fourth2" src="img/maxresdefault (1).jpg" alt="">
+      </div><br>
+      <div class="border"></div>
+      <br>
+      <p>The sand cat (Felis margarita) is a small wild cat that inhabits sandy and stony deserts far from water sources. With its sandy to light grey fur, it is well camouflaged in a desert environment. Its head-and-body length ranges from 39–52 cm (15–20 in) with a 23–31 cm (9.1–12.2 in) long tail. Its 5–7 cm (2.0–2.8 in) short ears are set low on the sides of the head, aiding detection of prey moving underground. The long hair covering the soles of its paws insulates its pads against the extreme temperatures found in deserts.</p><br>
+      <div class="buttons">
+        <button id="btn1">NYA</button>
+        <button id="btn2">SAD SONG</button>
+        <button id="btn3">SIREN</button>
+        <button id="btn4">NYAAAAA!</button>
+      </div>
+      
+    </div>
+    <audio id="audio1" src="audio/zvuk-koshki.mp3"></audio>
+    <audio id="audio2" src="audio/Rauf & Faik - деньги и счастье.mp3"></audio>
+    <audio id="audio3" src="audio/civil-defense-siren-388518.mp3"></audio>
+    <audio id="audio4" src="audio/nya_2xyALFL.mp3"></audio>
+    <script>
+      function stopAllAudio() {
+        document.querySelectorAll('audio').forEach((audio) => {
+          audio.pause();
+          audio.currentTime = 0;
+        });
+      }
+
+      document.getElementById('btn1').addEventListener('click', () => {
+        stopAllAudio();
+        document.getElementById('audio1').play();
+      });
+
+      document.getElementById('btn2').addEventListener('click', () => {
+        stopAllAudio();
+        document.getElementById('audio2').play();
+      });
+
+      document.getElementById('btn3').addEventListener('click', () => {
+        stopAllAudio();
+        document.getElementById('audio3').play();
+      });
+
+      document.getElementById('btn4').addEventListener('click', () => {
+        stopAllAudio();
+        document.getElementById('audio4').play();
+      });
+    </script>
+  </body>
+</html>

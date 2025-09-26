@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: both;
+  animation-name: body;
+  background: linear-gradient(to bottom, rgb(14, 77, 14), black, rgb(88, 146, 1));
+  background-size: 100% 200%;
+  animation: flowDown 10s ease-in-out infinite;
+}
+
+.container {
+  transition: all 0.4s ease;
+  animation-name: zoom;
+  overflow: hidden;
+  animation-duration: 2s;
+  border-radius: 25px;
+  width: 400px;
+  height: 800px;
+  background: rgb(233, 169, 75);
+}
+.container .images-of-cats {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .images-of-cats .first {
+  border-top-left-radius: 25px;
+  width: 140px;
+  height: 100px;
+}
+.container .images-of-cats .second {
+  width: 120px;
+  height: 140px;
+}
+.container .images-of-cats .thirth {
+  border-top-right-radius: 25px;
+  width: 140px;
+  height: 100px;
+}
+.container .images-of-cats .fourth {
+  margin-top: -40px;
+  width: 140px;
+  height: 100px;
+}
+.container .images-of-cats .five {
+  width: 260px;
+  height: 140px;
+}
+.container .images-of-cats .fourth2 {
+  margin-top: -80px;
+  width: 140px;
+  height: 100px;
+}
+.container .border {
+  width: 100%;
+  height: 12px;
+  background: rgb(47, 43, 44);
+}
+.container p {
+  margin: auto;
+  width: 350px;
+  text-align: center;
+  color: aliceblue;
+}
+.container .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+.container .buttons button {
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: aqua;
+  border: none;
+  color: rgb(104, 108, 108);
+  width: 80px;
+  border-radius: 25px;
+  height: 20px;
+}
+.container .buttons button:focus {
+  transition: all 0.4s ease;
+  background: rgb(233, 169, 75);
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 400px) {
+  body {
+    margin: 24px 12px;
+  }
+  .container {
+    margin: 24px 12px;
+    width: 370px;
+    height: 900px;
+  }
+  .images-of-cats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: none;
+  }
+  .images-of-cats .five {
+    margin-left: 90px;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes flowDown {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}/*# sourceMappingURL=style.css.map */
